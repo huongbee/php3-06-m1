@@ -1,0 +1,41 @@
+body{
+	background-image: url('../images/12.jpg');
+	background-size:cover;
+}
+
+p{
+	color: red
+}
+.world{
+	color: #025ced
+}
+#class{
+	color: #e23184;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Tahoma';
+	text-transform: uppercase;
+	text-shadow: 2px 2px #ffdbec
+}
+.container{
+	width: 300px;
+	text-align: center;
+}
+.tieude{
+	background-color: #f7e6f5;
+	color:#fc07df;
+	text-align: center;
+}
+.noidung{
+	background-color: #f9ffe0
+}
+.doan1{
+	color: green
+}
+.doan2{
+	color: #38e5f4
+
+}
+hr{
+	margin: 0 50px
+}
