@@ -1,0 +1,45 @@
+body{
+	background-image: url('../images/518164-backgrounds.jpg');
+	background-size: cover;
+}
+
+.container{
+	margin: 0 auto;
+	width: 1000px;
+}
+.header{
+	background-color: blue;
+	height: 80px;
+}
+
+.left{
+	background-color: #72ffee;
+	width:400px;
+	height: 200px;
+	float: left;
+}
+.right{
+	background-color: red;
+	width: 600px;
+	height: 200px;
+	float: right;
+}
+
+.left-2{
+	background-color: #f6f92c;
+	width:600px;
+	height: 300px;
+	float: left;
+}
+.right-2{
+	background-color:#ff72af;
+	width: 400px;
+	height: 300px;
+	float: right;
+}
+.footer{
+	background-color: #ffbe3d;
+	width: 1000px;
+	height: 80px;
+	clear: both;
+}

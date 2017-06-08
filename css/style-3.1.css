@@ -1,0 +1,35 @@
+.container{
+	width: 1000px;
+	margin: 0 auto
+}
+
+.hinh{
+	border: 1px solid #f3f3f3;
+	border-radius: 3px;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	background-color: blue
+}
+.hinh2{
+	background-color: red
+}
+.hinh img{
+	width: 80px!important;
+	padding: 10px;
+	position: fixed;
+}
+
+
+.hinh1{
+	position: relative;
+	top: 10px;
+	left: 10px
+}
+.hinh2{
+	position: relative;
+	top: 20px;
+	left: 20px;
+	z-index: 1
+}
