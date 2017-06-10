@@ -1,0 +1,25 @@
+.menucha li{
+	float: left;
+	list-style-type: none;
+	background-color: blue;
+	color: #fff;
+	padding: 10px 15px;
+	border-left: 1px #fff solid
+}
+.menucon{
+	display:  none;
+	position: absolute;
+	margin-left: -55px;
+	top: 54px
+}
+
+.menucha li:hover .menucon {
+	display: block;
+}
+.menucon li{
+	background-color: red;
+	float: none;
+	border-bottom: #fff solid 1px;
+	border-left:none;
+	padding: 10px 26px;
+}
