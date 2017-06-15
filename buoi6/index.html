@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Buổi 6</title>
+	<link rel="stylesheet" href="">
+
+	<script type="text/javascript">
+		
+		// document.write('Hello world!')
+
+		
+
+	function tinhtong(){
+		var soa = document.getElementById('so_a').value; //lấy value
+		var sob = document.getElementById('so_b').value; //get
+		var pheptinh = document.getElementById('pheptinh').value
+		var ketqua = document.getElementById('ketqua') //khai báo đối tượng
+		//var sob = document.getElementsByName('so_b')[0].value
+		
+		
+		
+		
+		// console.log(soa)
+		// console.log(sob)
+
+		if(!isNaN(soa) && !isNaN(sob)){
+			soa = parseInt(soa)
+			sob = parseInt(sob)
+			if(pheptinh=="+"){
+				kq = sob+soa
+			}
+			else if(pheptinh=="-"){
+				kq = soa-sob
+			}
+			else if(pheptinh=="*"){
+				kq = sob*soa
+			}
+			else if(pheptinh=="/"){
+				if(sob==0){
+					kq = 'Số b phải khác 0'
+				}
+				else{
+					kq = soa/sob
+				}
+				
+			}
+			//console.log(soa+sob)
+			ketqua.value = kq //gán tong cho value của kq
+		}
+		else if(isNaN(soa)){
+			document.getElementById('so_a').focus()
+			alert('Nhập lại số a')
+			return false;
+		}
+		else if(isNaN(sob)){
+			alert('Nhập lại số b')
+			document.getElementById('so_b').focus()
+			return false;
+		}
+
+		
+	}
+
+
+
+	</script>
+</head>
+<body>
+	Số a: <input type="text" id="so_a" placeholder="Nhập số a">
+	<br><br>
+	Số b: <input type="text" id="so_b" name="so_b"  placeholder="Nhập số b">
+	<br><br>
+	Phép tính: 
+	<select id="pheptinh">
+		<option value="+">Cộng</option>
+		<option value="-">Trừ</option>
+		<option value="*">Nhân</option>
+		<option value="/">Chia</option>
+	</select>
+	<br><br>
+	Kết quả: <input type="text" id="ketqua" readonly>
+	<br><br>
+	<button onclick="tinhtong()">Tính tổng</button>
+
+	<!-- <script src="buoi6.js"></script> -->
+
+
+	
+</body>
+</html>
