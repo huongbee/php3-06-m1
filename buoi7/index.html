@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Buổi 7</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	Số a:<input id="so_a" placeholder="Nhập số a">
+	<br><br>
+	Số b:<input id="so_b" placeholder="Nhập số b">
+	<br><br>
+	Phép tính : 
+	<select id="pt">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+	<br><br>
+	Kết quả:<input id="ket_qua" readonly>
+	<br><br>
+	<button class="xem">Tính</button>
+
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+
+	
+		$(document).ready(function(){
+			//thực thi công việc
+			$('.xem').click(function(){
+				//alert('chào bạn')
+				var so_a = $('#so_a').val(); //lấy giá trị
+				var so_b = $('#so_b').val();
+				var pheptinh = $('#pt').val()
+				
+				//kiểm tra phải người dùng nhập số hay ko?
+				if(isNaN(so_a) || isNaN(so_b)){
+					ketqua = "Vui lòng nhập số";
+					$('#ket_qua').val(ketqua) 
+					if(isNaN(so_a)){
+						$('#so_a').focus();
+					}
+
+					return false;
+
+				}
+				else if(so_a==''){
+					$('#so_a').focus();
+				}
+
+				if(pheptinh=='+'){
+					ketqua = parseInt(so_a)+parseInt(so_b)
+				}
+				else if(pheptinh=='-'){
+					ketqua = parseInt(so_a)-parseInt(so_b)
+				}
+				else if(pheptinh=='*'){
+					ketqua = parseInt(so_a)*parseInt(so_b)
+				}
+				else if(pheptinh=='/'){
+					if(parseInt(so_b)==0){
+						ketqua = "Số b khác 0";
+						$('#so_b').focus();
+						$('#ket_qua').val(ketqua)
+						return false;
+					}
+					ketqua = parseInt(so_a)/parseInt(so_b)
+				}
+
+				
+				//console.log(ketqua)
+				//$('#ket_qua').val() = ketqua // sai
+
+				$('#ket_qua').val(ketqua)  // gán giá trị
+			})
+		})
+
+	</script>
+</body>
+</html>
