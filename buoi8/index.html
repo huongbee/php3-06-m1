@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Buổi 8</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	Giá: <span class="gia">200000</span><br>
+	Tổng tiền: <span class="tong">200000</span>
+	<br>
+	<button class="tru">-</button>
+	<input type="text" class="soluong" value="1" min="1" style="width: 30px"/>
+	<button class="cong">+</button>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		
+	$(document).ready(function(){
+		var gia = $('.gia').text();
+		$('.cong').click(function(){
+			var soluong = parseInt($('.soluong').val())
+
+			//$('.soluong').val(soluong+1)
+			if(soluong<20){
+				$('.soluong').val(soluong+1)
+				$('.tong').html((soluong+1)*gia) //1
+			}
+
+		})
+		$('.tru').click(function(){
+			var soluong = parseInt($('.soluong').val())
+			if(soluong>1){
+				$('.soluong').val(soluong-1)
+				$('.tong').html((soluong-1)*gia) //1
+			}
+			
+
+		})
+	})
+
+
+	</script>
+</body>
+</html>

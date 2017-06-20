@@ -14,13 +14,38 @@
 </style>
 <body>
 	
-	<div class="banco">
-		
-	</div>
+	<div class="banco"> </div>
+
+
+
+
+	<div class="noidung"><p>Hello World!</p></div>
 	
 
+
+
+	<a href="http://khoapham.vn" target="_blank" class="khoapham">Khoa Phạm</a>
+
+	<div class="clickMe" id="">Click Me!</div>
+	
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script>
+	$(document).ready(function(){
+		//var noidung =  $('.noidung').text() //lấy dữ liệu
+		//alert(noidung)
+		$('.clickMe').click(function(){
+			//$('.noidung').html('<h1>Chào cả lớp<h1>') //gán dữ liệu
+			//$('.noidung').append('<h1>Chào cả lớp<h1>') // thêm data vào sau đối tượng
+			//$('.noidung').prepend('<h1>Chào cả lớp<h1>') // thêm data vào trước đối tượng
+
+			// var data = $('.khoapham').attr('href'); //lấy data
+			// console.log(data)
+ 
+			$('.khoapham').attr('href','http://online.khoapham.vn/') //gán data
+		})
+	})
+	</script>
+	<!-- <script>
 	$(document).ready(function(){
 
 		
@@ -32,15 +57,39 @@
 			"width":"20px",
 			"height":"20px",
 			"border":"1px solid blue",
-			"float":"left"
+			"float":"left",
+			'background-color':"#a8ffed",
+			'text-align':"center",
 		})
-
-
+		$('.o_co').mouseover(function(){
+			$(this).css({'background-color':"#f7fc64"})
+		})
+		$('.o_co').mouseout(function(){
+			$(this).css({'background-color':"#a8ffed"})
+		})
+		var dem = 0;
+		$('.o_co').click(function(){
+		    if($(this).html()== "") //lấy data
+		    {
+				dem = dem + 1;
+				if(dem%2==0)
+				{
+					$(this).html("X"); //gán data
+				}
+				else
+					$(this).html("O");
+			}
+			else
+			{
+				alert("chơi ăn gian");
+			}
+			
+		})
 
 	})
 
 
 	</script>
-	
+	 -->
 </body>
 </html>
